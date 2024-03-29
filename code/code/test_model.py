@@ -3,7 +3,9 @@
 import unittest
 from model import load_iris_data, train_model, evaluate_model
 
+
 class TestModel(unittest.TestCase):
+
     def setUp(self):
         self.X_train, self.X_test, self.y_train, self.y_test = load_iris_data()
 
@@ -21,6 +23,7 @@ class TestModel(unittest.TestCase):
         model = train_model(self.X_train, self.y_train)
         accuracy = evaluate_model(model, self.X_test, self.y_test)
         self.assertGreaterEqual(accuracy, 0.0)  # Assuming accuracy is always non-negative
+
 
 if __name__ == '__main__':
     unittest.main()
