@@ -24,5 +24,5 @@ predictions = knn.predict(X_test)
 
 # Calculate accuracy
 accuracy = accuracy_score(y_test, predictions)
-#Prnting the accuracy of model
+#Prnting the accuracy of model trained
 print("Accuracy of the trained model is :", accuracy)
