@@ -19,8 +19,10 @@ knn = KNeighborsClassifier(n_neighbors=3)
 knn.fit(X_train, y_train)
 
 # Make predictions on the testing set
+
 predictions = knn.predict(X_test)
 
 # Calculate accuracy
 accuracy = accuracy_score(y_test, predictions)
+#Prnting the accuracy of model
 print("Accuracy of the trained model is :", accuracy)
