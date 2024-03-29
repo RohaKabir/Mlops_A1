@@ -1,4 +1,3 @@
-# test_model.py
 
 import unittest
 from model import load_iris_data, train_model, evaluate_model
@@ -24,3 +23,4 @@ class TestModel(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
