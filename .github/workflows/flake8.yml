@@ -3,7 +3,8 @@ name: Flake8 Code Quality Check
 on:
   push:
     branches:
-      - dev  
+      - dev
+
 jobs:
   flake8:
     runs-on: ubuntu-latest
@@ -14,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.6' # Choose the appropriate Python version
+          python-version: '3.x' # Choose the appropriate Python version
 
       - name: Install dependencies
         run: pip install flake8
