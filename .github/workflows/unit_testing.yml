@@ -13,15 +13,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
 
       - name: Install dependencies
-        run: pip3 install pytest
-          
+
+        run: pip3 install pytest  # Adjust according to your project dependencies
 
       - name: Run unit tests
-        run: |
-          make test  
+        run: python -m unittest discover -s . -p test_model.py
+
