@@ -6,20 +6,21 @@ on:
       - dev
 
 jobs:
-  flake8:
+  test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x' # Choose the appropriate Python version
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
 
-      - name: Install dependencies
-        run: pip install flake8
+    - name: Install dependencies
+      run: pip install flake8
 
-      - name: Run Flake8
-        run: |
+    - name: Run Flake8
+      run: |
           flake8 .
