@@ -19,7 +19,9 @@ jobs:
           python-version: 3.8
 
       - name: Install dependencies
-        run: pip install -r requirements.txt  # Adjust according to your project dependencies
+        run: |
+          make install  
 
       - name: Run unit tests
-        run: python -m unittest discover -s . -p test_model.py  # Adjust the command according to your test file naming convention
+        run: |
+          make test  
